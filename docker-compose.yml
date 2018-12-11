@@ -1,0 +1,24 @@
+version: '3'
+services:
+  db:
+    build: ./mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Asia/Tokyo
+    volumes:
+      - mysql-data:/var/lib/mysql
+  app:
+    build: ./app
+    ports:
+      - 4567:4567
+    volumes:
+      - .:/selenium_ruby
+    links:
+      - db
+volumes:
+  mysql-data:
+    external: true
+
+
