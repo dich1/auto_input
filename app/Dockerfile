@@ -78,7 +78,7 @@ RUN cd /opt \
   && chmod -R 777 /opt/firefox
 
 ENV DISPLAY :1
-CMD Xvfb :1 -screen 0 1024x768x24
+RUN Xvfb :1 -screen 0 1024x768x24
 
 WORKDIR /selenium_ruby/app
 
