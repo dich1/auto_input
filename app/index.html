@@ -1,1 +1,24 @@
-<h1>テスト</h1>
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>TR</title>
+    <link rel="icon" href="./images/favicon.ico">
+  </head>
+  <body>
+    <h1>初期設定</h1>
+    <form name="set" action="" class="form">
+      <div id="set" class="text">
+        <input type="text" name="mail" placeholder="メールアドレス" value="" required="">
+        <input type="password" name="password" placeholder="パスワード" value="" required="">
+      </div>
+      <div id="button" class="submit">
+        <input type="button" name="login" value="ログイン" onclick="projects(document.set.mail.value, document.set.password.value);">
+      </div>
+    </form>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/javascript" src="./js/api.js"></script>
+      <script type="text/javascript" src="./js/index.js" defer></script>
+  </body>
+</html>

@@ -1,2 +1,2 @@
-require './tests'
-run AutoInput 
+require './main'
+run Main
